@@ -3,31 +3,34 @@
 using namespace std;
 
 double* calc(double* number_1, double* number_2, char* act) {
-    if (*act == '/') {
-        return (*number_1 != 0 && *number_2 != 0) ? new double{ *number_1 / *number_2 } : nullptr;
-    }
-    else if (*act == '*') {
-        return new double{ *number_1 * *number_2 };
-    }
-    else if (*act == '+') {
-        return new double{ *number_1 + *number_2 };
-    }
-    else if (*act == '-') {
-        return new double{ *number_1 - *number_2 };
-    }
-    /*else if (*act == '^') {
-     
-        double* temp = new double{ 1 };
-        int* i = new int{ 0 };
-        for (; *i < *number_2;)
-        {
-            *temp *= *number_1;
-            *i += 1;
+    if (number_1 != nullptr && number_2 != nullptr && act != nullptr) {
+
+        if (*act == '/') {
+            return (*number_1 != 0 && *number_2 != 0) ? new double{ *number_1 / *number_2 } : nullptr;
         }
-    }*/
-    else {
-        return nullptr;
-    } 
+        else if (*act == '*') {
+            return new double{ *number_1 * *number_2 };
+        }
+        else if (*act == '+') {
+            return new double{ *number_1 + *number_2 };
+        }
+        else if (*act == '-') {
+            return new double{ *number_1 - *number_2 };
+        }
+        /*else if (*act == '^') {
+
+            double* temp = new double{ 1 };
+            int* i = new int{ 0 };
+            for (; *i < *number_2;)
+            {
+                *temp *= *number_1;
+                *i += 1;
+            }
+        }*/
+        else {
+            return nullptr;
+        }
+    }
 }
 
 int main() {
