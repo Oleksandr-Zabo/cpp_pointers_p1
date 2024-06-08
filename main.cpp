@@ -15,7 +15,7 @@ int main()
 	cin >> *num_1;
 
 	int* num_2 = new int;
-	cout << "Enter he second number: ";
+	cout << "Enter the second number: ";
 	cin >> *num_2;
 
 	cout << "Max number: " << max_num(num_1, num_2)<<endl;
