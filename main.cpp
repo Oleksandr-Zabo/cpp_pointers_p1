@@ -17,16 +17,18 @@ double* calc(double* number_1, double* number_2, char* act) {
         else if (*act == '-') {
             return new double{ *number_1 - *number_2 };
         }
-        /*else if (*act == '^') {
+        else if (*act == '^') {
 
-            double* temp = new double{ 1 };
+            double* temp = new double{ 1.0 };
             int* i = new int{ 0 };
             for (; *i < *number_2;)
             {
                 *temp *= *number_1;
                 *i += 1;
             }
-        }*/
+            return temp;
+            delete temp;
+        }
         else {
             return nullptr;
         }
