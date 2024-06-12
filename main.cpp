@@ -5,8 +5,8 @@ using namespace std;
 template <typename T>
 T* createArray(int size) {
     T* arr = new T[size];
-    for (int i = 0; i < size; i++) {
-        arr[i] = rand() % 255;
+    for (int* i = new int{ 0 }; *i < size; *i += 1) {
+        arr[*i] = rand() % 255;
     }
     return arr;
 }
@@ -23,8 +23,10 @@ void printArray(T* arr, int size) {
 
 template <typename T>
 void rewrite_array(T* p_1, T* p_2, int size) {
-    for (int i = 0; i < size; i++) {
-        p_2[i] = p_1[i];
+    if (p_1 != nullptr || p_2 != nullptr) {
+        for (int* i = new int{ 0 }; *i < size; *i += 1) {
+            p_2[*i] = p_1[*i];
+        }
     }
 }
 
