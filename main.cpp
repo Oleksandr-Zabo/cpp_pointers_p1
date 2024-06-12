@@ -23,7 +23,7 @@ void printArray(T* arr, int size) {
 
 template <typename T>
 void rewrite_array(T* p_1, T* p_2, int size) {
-    if (p_1 != nullptr || p_2 != nullptr) {
+    if (p_1 != nullptr && p_2 != nullptr) {
         for (int* i = new int{ 0 }; *i < size; *i += 1) {
             p_2[*i] = p_1[*i];
         }
