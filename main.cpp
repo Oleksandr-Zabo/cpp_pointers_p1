@@ -13,10 +13,12 @@ T* createArray(int size) {
 
 template <typename T>
 void printArray(T* arr, int size) {
-    for (int* i = new int{0}; *i < size; *i += 1) {
-        cout << *(arr + *i) << " ";
+    if (arr != nullptr) {
+        for (int* i = new int{ 0 }; *i < size; *i += 1) {
+            cout << *(arr + *i) << " ";
+        }
+        cout << endl;
     }
-    cout << endl;
 }
 
 template <typename T>
