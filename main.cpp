@@ -20,7 +20,7 @@ void printArray(T* arr, int size) {
         cout << endl;
     }
 }
-
+ 
 template <typename T>
 void rewrite_array(T* p_1, int size) {
     if (p_1 != nullptr) {
